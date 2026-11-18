@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Portfolio of Aniket Sharma - Computer Science Undergraduate, Frontend Developer, and Problem Solver based in Kanpur, India.">
+  <meta name="keywords"
+    content="Aniket Sharma, Portfolio, Web Developer, Computer Science, Frontend, HTML, CSS, JavaScript, CSJMU">
+  <meta name="author" content="Aniket Sharma">
+  <title>Aniket Sharma | Computer Science & Web Developer Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- 3D WebGL Canvas Container -->
+  <div id="webgl-container"></div>
+
+  <!-- Ambient Glow Effects -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="brand-logo">
+        <span class="logo-bracket">&lt;</span>
+        <span class="logo-name">Aniket</span>
+        <span class="logo-accent">.dev</span>
+        <span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link"><i class="fa-solid fa-user-astronaut"></i> About</a>
+        <a href="#skills" class="nav-link"><i class="fa-solid fa-microchip"></i> Skills</a>
+        <a href="#projects" class="nav-link"><i class="fa-solid fa-layer-group"></i> Projects</a>
+        <a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a>
+        <a href="#achievements" class="nav-link"><i class="fa-solid fa-trophy"></i> Awards</a>
+        <a href="#contact" class="nav-link"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline btn-sm resume-btn" id="openResumeBtn">
+          <i class="fa-solid fa-file-invoice"></i> <span>View Resume</span>
+        </button>
+        <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span class="pulse-indicator"></span>
+        <span>Open for Opportunities &amp; Collaborations</span>
+      </div>
+
+      <h1 class="hero-title">
+        Hi, I'm <span class="gradient-text glow-text">Aniket Sharma</span>
+      </h1>
+
+      <div class="typewriter-box">
+        <span class="type-prefix">&gt; </span>
+        <span class="type-text" id="typewriterText"></span>
+        <span class="cursor-blink">|</span>
+      </div>
+
+      <p class="hero-description">
+        Motivated Computer Science undergraduate with a keen passion for software development, modern web architecture,
+        and emerging technologies. Dedicated to crafting fast, responsive, and aesthetically engaging digital
+        experiences.
+      </p>
+
+      <!-- Quick Info Chips -->
+      <div class="hero-chips">
+        <div class="chip">
+          <i class="fa-solid fa-location-dot"></i>
+          <span>Kanpur, Uttar Pradesh, India</span>
+        </div>
+        <div class="chip">
+          <i class="fa-solid fa-graduation-cap"></i>
+          <span>B.Tech CSE &bull; CSJMU (2024–2028)</span>
+        </div>
+        <div class="chip">
+          <i class="fa-solid fa-code"></i>
+          <span>Frontend &amp; Software Dev</span>
+        </div>
+      </div>
+
+      <!-- Hero Call-to-Actions -->
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary magnetic-btn">
+          <span>Explore Projects</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+        <a href="#contact" class="btn btn-glass magnetic-btn">
+          <span>Get In Touch</span>
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+
+      <!-- Social Links Bar -->
+      <div class="hero-socials">
+        <a href="https://github.com/aniketsharma85" target="_blank" rel="noopener noreferrer" class="social-icon"
+          data-tooltip="github.com/aniketsharma85">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-icon"
+          data-tooltip="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:csjmu24001390024@csjmu.ac.in" class="social-icon" data-tooltip="csjmu24001390024@csjmu.ac.in">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+        <a href="tel:6388587190" class="social-icon" data-tooltip="+91 6388587190">
+          <i class="fa-solid fa-phone"></i>
+        </a>
+      </div>
+
+      <div class="scroll-down-indicator">
+        <a href="#about" aria-label="Scroll to About section">
+          <div class="mouse-icon">
+            <div class="wheel"></div>
+          </div>
+          <span>Scroll to explore</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// WHO I AM</span>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-divider"></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card tilt-card glass-panel" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="about-card-inner">
+            <div class="about-avatar-wrapper">
+              <div class="avatar-box">
+                <span class="avatar-initials">AS</span>
+              </div>
+            </div>
+            <h3 class="about-name">Aniket Sharma</h3>
+            <span class="about-role">CS Undergrad &amp; Web Developer</span>
+            <div class="status-pill">
+              <span class="status-dot"></span> Ready to build real-world software
+            </div>
+
+            <ul class="quick-details-list">
+              <li>
+                <span class="detail-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                <a href="mailto:csjmu24001390024@csjmu.ac.in" class="detail-val">csjmu24001390024@csjmu.ac.in</a>
+              </li>
+              <li>
+                <span class="detail-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                <a href="tel:6388587190" class="detail-val">+91 6388587190</a>
+              </li>
+              <li>
+                <span class="detail-label"><i class="fa-solid fa-map-pin"></i> Location:</span>
+                <span class="detail-val">305 Shivkatra Harjinder Nagar, Kanpur, UP</span>
+              </li>
+              <li>
+                <span class="detail-label"><i class="fa-solid fa-university"></i> University:</span>
+                <span class="detail-val">CSJMU Kanpur (2024–2028)</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="glass-panel text-panel">
+            <h3 class="subheading">
+              <i class="fa-solid fa-compass"></i> Career Objective
+            </h3>
+            <p class="paragraph">
+              I am a motivated Computer Science undergraduate with a keen interest in software development, full-stack
+              engineering, and emerging technologies. I seek opportunities to gain hands-on experience, collaborate with
+              innovative minds, and contribute effectively to real-world impactful projects.
+            </p>
+          </div>
+
+          <div class="glass-panel text-panel">
+            <h3 class="subheading">
+              <i class="fa-solid fa-heart-pulse"></i> Activities &amp; Interests
+            </h3>
+            <p class="paragraph">
+              I love picking up new skills and exploring fresh ideas—whether through coding, reading, or diving into
+              creative UI solutions. <strong>Cricket</strong> is my go-to for fun, energy, and teamwork dynamics, and I
+              enjoy winding down with a good book that sparks curiosity or tells a great story.
+            </p>
+          </div>
+
+          <!-- Highlight Stats Counters -->
+          <div class="stats-grid">
+            <div class="stat-card glass-panel tilt-card" data-tilt>
+              <div class="stat-number">90%</div>
+              <div class="stat-label">Class X (CBSE)</div>
+              <div class="stat-sub">School 3rd Rank</div>
+            </div>
+            <div class="stat-card glass-panel tilt-card" data-tilt>
+              <div class="stat-number">77%</div>
+              <div class="stat-label">Class XII (CBSE)</div>
+              <div class="stat-sub">HAL Vidyalaya</div>
+            </div>
+            <div class="stat-card glass-panel tilt-card" data-tilt>
+              <div class="stat-number">3+</div>
+              <div class="stat-label">Web Projects</div>
+              <div class="stat-sub">Functional &amp; Clones</div>
+            </div>
+            <div class="stat-card glass-panel tilt-card" data-tilt>
+              <div class="stat-number">2028</div>
+              <div class="stat-label">B.Tech Batch</div>
+              <div class="stat-sub">CSJMU Kanpur</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// TECH ARSENAL</span>
+        <h2 class="section-title">Professional <span class="gradient-text">Skills</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Technologies, programming languages, and core tools I build and design with.</p>
+      </div>
+
+      <div class="skills-wrapper">
+        <!-- Programming Languages -->
+        <div class="skill-category glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="cat-header">
+            <div class="cat-icon icon-code">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Programming Languages</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">
+              <i class="fa-solid fa-c"></i>
+              <span>C Language</span>
+              <span class="skill-level">Core</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-solid fa-microchip"></i>
+              <span>C++</span>
+              <span class="skill-level">DSA / OOP</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-brands fa-python"></i>
+              <span>Python</span>
+              <span class="skill-level">Fundamentals</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Web Technologies -->
+        <div class="skill-category glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="cat-header">
+            <div class="cat-icon icon-web">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3>Web Technologies</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">
+              <i class="fa-brands fa-html5"></i>
+              <span>HTML5</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-brands fa-css3-alt"></i>
+              <span>CSS3 / Styling</span>
+              <span class="skill-level">Responsive</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-brands fa-js"></i>
+              <span>JavaScript (ES6+)</span>
+              <span class="skill-level">Interactive</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database & Core -->
+        <div class="skill-category glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="cat-header">
+            <div class="cat-icon icon-db">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3>Database &amp; Fundamentals</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">
+              <i class="fa-solid fa-server"></i>
+              <span>MySQL</span>
+              <span class="skill-level">Relational</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span>DBMS Fundamentals</span>
+              <span class="skill-level">Concepts</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-solid fa-network-wired"></i>
+              <span>Data Structures</span>
+              <span class="skill-level">Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools & Platforms -->
+        <div class="skill-category glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="cat-header">
+            <div class="cat-icon icon-tools">
+              <i class="fa-solid fa-wrench"></i>
+            </div>
+            <h3>Tools &amp; Platforms</h3>
+          </div>
+          <div class="skill-items">
+            <div class="skill-pill">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span>VS Code</span>
+              <span class="skill-level">IDE</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-brands fa-git-alt"></i>
+              <span>Git</span>
+              <span class="skill-level">Version Control</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+              <span class="skill-level">Repo Collab</span>
+            </div>
+            <div class="skill-pill">
+              <i class="fa-solid fa-palette"></i>
+              <span>Canva</span>
+              <span class="skill-level">UI Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="skill-category glass-panel tilt-card span-full" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="cat-header">
+            <div class="cat-icon icon-soft">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>Professional &amp; Soft Skills</h3>
+          </div>
+          <div class="soft-skills-grid">
+            <div class="soft-chip">
+              <i class="fa-solid fa-comments"></i>
+              <span>Effective Communication</span>
+            </div>
+            <div class="soft-chip">
+              <i class="fa-solid fa-people-group"></i>
+              <span>Team Collaboration</span>
+            </div>
+            <div class="soft-chip">
+              <i class="fa-solid fa-brain"></i>
+              <span>Analytical Problem Solving</span>
+            </div>
+            <div class="soft-chip">
+              <i class="fa-solid fa-bolt"></i>
+              <span>Fast Learning &amp; Adaptability</span>
+            </div>
+            <div class="soft-chip">
+              <i class="fa-solid fa-flag"></i>
+              <span>Leadership &amp; Initiative</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects & Internship Section -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// PORTFOLIO WORK</span>
+        <h2 class="section-title">Projects &amp; <span class="gradient-text">Internship</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Practical projects and industry virtual experience demonstrating frontend design and
+          logic building.</p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Works</button>
+        <button class="filter-btn" data-filter="internship">Internship Experience</button>
+        <button class="filter-btn" data-filter="web">Web Apps &amp; Clones</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Card 1: CodSoft Internship -->
+        <div class="project-card glass-panel tilt-card" data-category="internship" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="project-visual intern-visual">
+            <div class="visual-badge">Virtual Internship</div>
+            <div class="tech-floating-icons">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <div class="visual-overlay">
+              <span class="intern-company">CodSoft</span>
+              <span class="intern-role">Web Development Intern (2024)</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type"><i class="fa-solid fa-award"></i> Industry Training</span>
+              <span class="project-date">2024</span>
+            </div>
+            <h3 class="project-title">CodSoft Web Development Internship</h3>
+            <p class="project-desc">
+              Completed 3 practical development task projects: Personal Portfolio, Modern Landing Page, and an
+              Interactive Calculator. Acquired real-world experience in application design, clean logic building, and
+              responsive debugging.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">UI/UX</span>
+              <span class="tag">Debugging</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-sm btn-primary view-cert-btn" data-cert="codsoft">
+                <i class="fa-solid fa-certificate"></i> View Details
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Interactive Calculator -->
+        <div class="project-card glass-panel tilt-card" data-category="web" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="project-visual calc-visual">
+            <div class="visual-badge">Live Interactive App</div>
+            <div class="calc-preview-mini">
+              <div class="mini-screen">3.14159 &times; 42</div>
+              <div class="mini-grid">
+                <span>7</span><span>8</span><span>9</span><span class="op">/</span>
+                <span>4</span><span>5</span><span>6</span><span class="op">&times;</span>
+                <span>1</span><span>2</span><span>3</span><span class="op">-</span>
+                <span>0</span><span>.</span><span class="equal">=</span><span class="op">+</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type"><i class="fa-solid fa-calculator"></i> JavaScript Application</span>
+              <span class="project-date">Completed</span>
+            </div>
+            <h3 class="project-title">Fully Functional Interactive Calculator</h3>
+            <p class="project-desc">
+              Built using vanilla HTML, CSS, and JavaScript. Features real-time arithmetic calculations, error handling
+              for invalid operations, clean numeric formatting, and sleek neumorphic buttons.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">JavaScript (ES6)</span>
+              <span class="tag">DOM Manipulation</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-sm btn-primary try-calc-btn" id="openCalcModalBtn">
+                <i class="fa-solid fa-play"></i> Try Live Calculator
+              </button>
+              <a href="https://github.com/aniketsharma85" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                <i class="fa-brands fa-github"></i> Source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Zerodha Frontend Clone -->
+        <div class="project-card glass-panel tilt-card" data-category="web" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="project-visual zerodha-visual">
+            <div class="visual-badge">Fintech UI Replica</div>
+            <div class="zerodha-preview">
+              <div class="zerodha-bar">
+                <span class="z-brand">ZERODHA</span>
+                <span class="z-nav">Signup &bull; About &bull; Products &bull; Pricing</span>
+              </div>
+              <div class="z-hero">
+                <h4>Invest in everything</h4>
+                <p>Online platform to invest in stocks, derivatives, mutual funds</p>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type"><i class="fa-solid fa-chart-line"></i> UI/UX Engineering</span>
+              <span class="project-date">Completed</span>
+            </div>
+            <h3 class="project-title">Zerodha Frontend UI Clone</h3>
+            <p class="project-desc">
+              Created a high-fidelity frontend replica of Zerodha's clean, minimalist landing page to practice modern
+              responsive web layouts, CSS flexbox/grid architectures, and commercial UI aesthetics.
+            </p>
+            <div class="project-tags">
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Flexbox / Grid</span>
+              <span class="tag">Responsive Layout</span>
+            </div>
+            <div class="project-footer">
+              <button class="btn btn-sm btn-primary view-zerodha-btn" id="openZerodhaModalBtn">
+                <i class="fa-solid fa-eye"></i> View Preview
+              </button>
+              <a href="https://github.com/aniketsharma85" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Modern 3D Portfolio Website -->
+        <div class="project-card glass-panel tilt-card" data-category="web" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="project-visual portfolio-visual">
+            <div class="visual-badge">Featured Showcase</div>
+            <div class="portfolio-preview-graphic">
+              <div class="code-preview-box">
+                <span class="code-dot red"></span><span class="code-dot yellow"></span><span class="code-dot green"></span>
+                <span class="code-snippet">&lt;Developer /&gt; Portfolio v2.0</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-type"><i class="fa-solid fa-wand-magic-sparkles"></i> 3D Web Experience</span>
+              <span class="project-date">Current</span>
+            </div>
+            <h3 class="project-title">Interactive 3D Glassmorphic Portfolio</h3>
+            <p class="project-desc">
+              This personalized developer website featuring an interactive Three.js 3D particle universe, tilt hover
+              physics, dynamic spotlight illumination, and responsive glassmorphism.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Three.js</span>
+              <span class="tag">WebGL</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3 Glass</span>
+              <span class="tag">JavaScript ES6</span>
+            </div>
+            <div class="project-footer">
+              <a href="#hero" class="btn btn-sm btn-primary">
+                <i class="fa-solid fa-arrows-rotate"></i> Reload Experience
+              </a>
+              <a href="https://github.com/aniketsharma85" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost">
+                <i class="fa-brands fa-github"></i> Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Timeline Section -->
+  <section class="section education-section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// ACADEMIC BACKGROUND</span>
+        <h2 class="section-title">Education &amp; <span class="gradient-text">Qualifications</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Consistent academic track record in computer science and science stream.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1: B.Tech -->
+        <div class="timeline-item tilt-card glass-panel" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="timeline-dot">
+            <i class="fa-solid fa-graduation-cap"></i>
+          </div>
+          <div class="timeline-date">2024 &mdash; 2028 (Pursuing)</div>
+          <div class="timeline-content">
+            <div class="badge-accent">Undergraduate Degree</div>
+            <h3 class="timeline-title">B.Tech in Computer Science &amp; Engineering</h3>
+            <h4 class="timeline-inst">
+              <i class="fa-solid fa-building-columns"></i> Chhatrapati Shahu Ji Maharaj University (CSJMU), Kanpur
+            </h4>
+            <p class="timeline-desc">
+              Focusing on Data Structures &amp; Algorithms, Object-Oriented Programming, Database Management Systems,
+              Operating Systems, Computer Architecture, and Modern Full-Stack Web Development.
+            </p>
+            <div class="timeline-chips">
+              <span>B.Tech CSE</span>
+              <span>CSJMU Campus</span>
+              <span>Active Student</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2: Class XII -->
+        <div class="timeline-item tilt-card glass-panel" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="timeline-dot">
+            <i class="fa-solid fa-school"></i>
+          </div>
+          <div class="timeline-date">Intermediate (Class XII)</div>
+          <div class="timeline-content">
+            <div class="score-badge">77% Score</div>
+            <h3 class="timeline-title">Senior Secondary School Examination (Class XII)</h3>
+            <h4 class="timeline-inst">
+              <i class="fa-solid fa-school-flag"></i> HAL VIDYALAYA SCHOOL, CBSE Board
+            </h4>
+            <p class="timeline-desc">
+              Completed Senior Secondary education under the Central Board of Secondary Education (CBSE) with focus on
+              Physics, Chemistry, and Mathematics (PCM).
+            </p>
+            <div class="timeline-chips">
+              <span>CBSE Board</span>
+              <span>HAL Vidyalaya</span>
+              <span>77% Aggregate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3: Class X -->
+        <div class="timeline-item tilt-card glass-panel" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="timeline-dot">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <div class="timeline-date">High School (Class X)</div>
+          <div class="timeline-content">
+            <div class="score-badge gold-badge">96% Score &bull; School 3rd Rank</div>
+            <h3 class="timeline-title">Secondary School Examination (Class X)</h3>
+            <h4 class="timeline-inst">
+              <i class="fa-solid fa-school-flag"></i> HAL VIDYALAYA SCHOOL, CBSE Board
+            </h4>
+            <p class="timeline-desc">
+              Achieved outstanding academic excellence by securing an aggregate of <strong>96%</strong> and winning the
+              prestigious <strong>3rd Rank in the school</strong>.
+            </p>
+            <div class="timeline-chips">
+              <span>CBSE Board</span>
+              <span>School Rank 3</span>
+              <span>96% Aggregate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Achievements Section -->
+  <section class="section achievements-section" id="achievements">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// RECOGNITION</span>
+        <h2 class="section-title">Awards, Honours &amp; <span class="gradient-text">Achievements</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Key milestones and accolades earned through dedication and consistent performance.</p>
+      </div>
+
+      <div class="achievements-grid">
+        <!-- Award 1 -->
+        <div class="achievement-card glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="award-trophy gold">
+            <i class="fa-solid fa-trophy"></i>
+          </div>
+          <div class="award-content">
+            <span class="award-tag">School Level &bull; Academic</span>
+            <h3 class="award-title">Secured 3rd Rank in Class X</h3>
+            <div class="award-org">HAL Vidyalaya School (CBSE)</div>
+            <p class="award-desc">
+              Earned 3rd position across the entire school with an aggregate score of 96% in the Class X CBSE Board
+              Examination.
+            </p>
+          </div>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="achievement-card glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="award-trophy silver">
+            <i class="fa-solid fa-medal"></i>
+          </div>
+          <div class="award-content">
+            <span class="award-tag">State Level &bull; Competition</span>
+            <h3 class="award-title">Brain of Brain State Silver Topper</h3>
+            <div class="award-org">State Level Brain of Brain Competition</div>
+            <p class="award-desc">
+              Awarded Silver Topper medal in the prestigious state-level mental ability, analytical reasoning, and logic
+              competition in Class Vth.
+            </p>
+          </div>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="achievement-card glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <div class="award-trophy blue">
+            <i class="fa-solid fa-certificate"></i>
+          </div>
+          <div class="award-content">
+            <span class="award-tag">Industry Internship &bull; 2024</span>
+            <h3 class="award-title">CodSoft Web Development Certificate</h3>
+            <div class="award-org">CodSoft Internship Program</div>
+            <p class="award-desc">
+              Successfully completed all assigned web development projects, showcasing proficiency in HTML, CSS,
+              JavaScript, and responsive design principles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">// GET IN TOUCH</span>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <div class="section-divider"></div>
+        <p class="section-desc">Have an opportunity, project idea, or just want to chat about tech? Feel free to reach
+          out!</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info">
+          <div class="contact-item glass-panel tilt-card" data-tilt>
+            <div class="card-spotlight"></div>
+            <div class="contact-icon icon-email">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Email Address</h4>
+              <a href="mailto:csjmu24001390024@csjmu.ac.in">csjmu24001390024@csjmu.ac.in</a>
+              <span class="contact-note">Direct student institutional email</span>
+            </div>
+          </div>
+
+          <div class="contact-item glass-panel tilt-card" data-tilt>
+            <div class="card-spotlight"></div>
+            <div class="contact-icon icon-phone">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Phone / WhatsApp</h4>
+              <a href="tel:6388587190">+91 6388587190</a>
+              <span class="contact-note">Available Mon - Sat for calls &amp; inquiries</span>
+            </div>
+          </div>
+
+          <div class="contact-item glass-panel tilt-card" data-tilt>
+            <div class="card-spotlight"></div>
+            <div class="contact-icon icon-location">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="contact-text">
+              <h4>Residential Location</h4>
+              <p>305 Shivkatra Harjinder Nagar, Kanpur, Uttar Pradesh, India</p>
+              <span class="contact-note">Open to local &amp; remote collaborations</span>
+            </div>
+          </div>
+
+          <div class="contact-item glass-panel tilt-card" data-tilt>
+            <div class="card-spotlight"></div>
+            <div class="contact-icon icon-ref">
+              <i class="fa-solid fa-user-check"></i>
+            </div>
+            <div class="contact-text">
+              <h4>References</h4>
+              <p>Available upon request from academic mentors and project supervisors.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper glass-panel tilt-card" data-tilt>
+          <div class="card-spotlight"></div>
+          <form class="contact-form" id="contactForm">
+            <h3 class="form-title">Send Me a Message</h3>
+
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-user input-icon"></i>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Your Email</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-envelope input-icon"></i>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-tag input-icon"></i>
+                <input type="text" id="subject" name="subject" placeholder="Project collaboration / Internship offer"
+                  required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-message input-icon textarea-icon"></i>
+                <textarea id="message" name="message" rows="4" placeholder="Hello Aniket, I would like to talk about..."
+                  required></textarea>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit magnetic-btn">
+              <span>Send Message</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Live Calculator Modal -->
+  <div class="modal" id="calcModal">
+    <div class="modal-backdrop" id="calcBackdrop"></div>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-calculator"></i>
+          <h3>Interactive Web Calculator (Demo)</h3>
+        </div>
+        <button class="modal-close" id="closeCalcBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-intro">
+          This is a live, working reproduction of the calculator project built with HTML, CSS, and JavaScript. Try
+          calculating below!
+        </p>
+        <div class="live-calc">
+          <div class="calc-display-wrap">
+            <div class="calc-history" id="calcHistory"></div>
+            <div class="calc-screen" id="calcScreen">0</div>
+          </div>
+          <div class="calc-keyboard">
+            <button class="c-btn c-fn" data-action="clear">AC</button>
+            <button class="c-btn c-fn" data-action="delete"><i class="fa-solid fa-delete-left"></i></button>
+            <button class="c-btn c-fn" data-action="percent">%</button>
+            <button class="c-btn c-op" data-action="operator" data-val="/">&divide;</button>
+
+            <button class="c-btn c-num" data-val="7">7</button>
+            <button class="c-btn c-num" data-val="8">8</button>
+            <button class="c-btn c-num" data-val="9">9</button>
+            <button class="c-btn c-op" data-action="operator" data-val="*">&times;</button>
+
+            <button class="c-btn c-num" data-val="4">4</button>
+            <button class="c-btn c-num" data-val="5">5</button>
+            <button class="c-btn c-num" data-val="6">6</button>
+            <button class="c-btn c-op" data-action="operator" data-val="-">&minus;</button>
+
+            <button class="c-btn c-num" data-val="1">1</button>
+            <button class="c-btn c-num" data-val="2">2</button>
+            <button class="c-btn c-num" data-val="3">3</button>
+            <button class="c-btn c-op" data-action="operator" data-val="+">+</button>
+
+            <button class="c-btn c-num c-zero" data-val="0">0</button>
+            <button class="c-btn c-num" data-val=".">.</button>
+            <button class="c-btn c-eq" data-action="calculate">=</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive Zerodha Clone Modal -->
+  <div class="modal" id="zerodhaModal">
+    <div class="modal-backdrop" id="zerodhaBackdrop"></div>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-chart-line"></i>
+          <h3>Zerodha Landing Page Clone (UI Showcase)</h3>
+        </div>
+        <button class="modal-close" id="closeZerodhaBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="clone-browser-window">
+          <div class="browser-tab-bar">
+            <span class="browser-dot red"></span>
+            <span class="browser-dot yellow"></span>
+            <span class="browser-dot green"></span>
+            <div class="browser-address">https://zerodha.com (UI Clone Replica by Aniket)</div>
+          </div>
+          <div class="browser-content-demo">
+            <header class="z-demo-header">
+              <div class="z-demo-logo">ZERODHA</div>
+              <div class="z-demo-menu">
+                <span>Signup</span>
+                <span>About</span>
+                <span>Products</span>
+                <span>Pricing</span>
+                <span>Support</span>
+              </div>
+            </header>
+            <div class="z-demo-hero">
+              <div class="z-demo-img-placeholder">
+                <i class="fa-solid fa-chart-pie"></i>
+              </div>
+              <h2 class="z-demo-title">Invest in everything</h2>
+              <p class="z-demo-sub">Online platform to invest in stocks, derivatives, mutual funds, and more</p>
+              <button class="z-demo-cta">Sign up for free</button>
+            </div>
+            <div class="z-demo-features">
+              <div class="z-feat-card">
+                <i class="fa-solid fa-wallet"></i>
+                <h4>Zero brokerage</h4>
+                <p>Free equity delivery and direct mutual funds.</p>
+              </div>
+              <div class="z-feat-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h4>Lightning Fast</h4>
+                <p>Super fast order placement and trading tools.</p>
+              </div>
+              <div class="z-feat-card">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                <h4>Kite Mobile</h4>
+                <p>Intuitive and fluid trading on the go.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resume Preview Modal -->
+  <div class="modal" id="resumeModal">
+    <div class="modal-backdrop" id="resumeBackdrop"></div>
+    <div class="modal-dialog modal-lg resume-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <i class="fa-solid fa-file-invoice"></i>
+          <h3>Aniket Sharma &mdash; Resume</h3>
+        </div>
+        <div class="resume-actions">
+          <button class="btn btn-sm btn-outline print-btn" onclick="window.print()">
+            <i class="fa-solid fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close" id="closeResumeBtn" aria-label="Close modal">&times;</button>
+        </div>
+      </div>
+      <div class="modal-body resume-body" id="resumePrintArea">
+        <!-- Digital CV Layout matching user's document -->
+        <div class="resume-sheet">
+          <header class="resume-header">
+            <h1 class="r-name">Aniket Sharma</h1>
+            <div class="r-address"><i class="fa-solid fa-location-dot"></i> 305 Shivkatra Harjinder Nagar, Kanpur, Uttar
+              Pradesh</div>
+            <div class="r-contacts">
+              <span><i class="fa-solid fa-phone"></i> 6388587190</span>
+              <span>&bull;</span>
+              <span><i class="fa-solid fa-envelope"></i> csjmu24001390024@csjmu.ac.in</span>
+            </div>
+            <div class="r-links">
+              <span><i class="fa-brands fa-linkedin"></i> LinkedIn</span>
+              <span>&bull;</span>
+              <span><i class="fa-brands fa-github"></i> <a href="https://github.com/aniketsharma85" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">github.com/aniketsharma85</a></span>
+            </div>
+          </header>
+
+          <hr class="r-divider">
+
+          <section class="r-section">
+            <h3 class="r-title">Career Objective</h3>
+            <p class="r-text">
+              Motivated Computer Science undergraduate with a keen interest in software development and emerging
+              technologies. Seeking opportunities to gain hands-on experience and contribute to real-world projects.
+            </p>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">Education</h3>
+            <table class="r-table">
+              <thead>
+                <tr>
+                  <th>Course</th>
+                  <th>Institution</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>B.Tech CSE</strong></td>
+                  <td>CSJMU, Kanpur (2024–2028)</td>
+                  <td>Pursuing</td>
+                </tr>
+                <tr>
+                  <td><strong>Intermediate (Class XII)</strong></td>
+                  <td>HAL VIDYALAYA SCHOOL, CBSE Board</td>
+                  <td>77%</td>
+                </tr>
+                <tr>
+                  <td><strong>High School (Class X)</strong></td>
+                  <td>HAL VIDYALAYA SCHOOL, CBSE Board</td>
+                  <td>96% (School 3rd Rank)</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">Projects &amp; Internship Experience</h3>
+            <div class="r-proj-item">
+              <h4 class="r-sub">CodSoft Virtual Internship (Web Development) &bull; 2024</h4>
+              <p class="r-text">
+                Completed 3 practical task projects: Portfolio, Landing Page, and a Calculator. Learned real-world Web
+                Development use application design, logic building, and debugging.
+              </p>
+            </div>
+            <div class="r-proj-item">
+              <h4 class="r-sub">Calculator (Fully Functional)</h4>
+              <p class="r-text">Built using HTML, CSS, and JavaScript.</p>
+            </div>
+            <div class="r-proj-item">
+              <h4 class="r-sub">Zerodha Frontend Clone</h4>
+              <p class="r-text">Created a replica of Zerodha's homepage using HTML &amp; CSS to practice UI design.</p>
+            </div>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">Professional Skills</h3>
+            <ul class="r-skills-list">
+              <li><strong>Programming Languages:</strong> C, C++, Python</li>
+              <li><strong>Web Technologies:</strong> HTML, CSS, JavaScript</li>
+              <li><strong>Database:</strong> MYSQL, DBMS Fundamentals</li>
+              <li><strong>Tools &amp; Platforms:</strong> VS Code, Git, GitHub, Canva</li>
+              <li><strong>Soft Skills:</strong> Communication, Teamwork, Problem Solving, Fast Learning, Leadership</li>
+            </ul>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">Activities &amp; Interests</h3>
+            <p class="r-text">
+              Love picking up new skills and exploring fresh ideas—whether it's through coding, reading, or just trying
+              something new. Cricket is my go-to for fun and teamwork, and I enjoy winding down with a good book that
+              sparks curiosity or tells a great story.
+            </p>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">Awards, Honours &amp; Achievements</h3>
+            <ul class="r-bullets">
+              <li>CodSoft Web Development Internship Certificate (2024)</li>
+              <li>Brain of Brain State Silver Topper in Class Vth.</li>
+              <li>Secured 3rd Rank in Class X in my School.</li>
+            </ul>
+          </section>
+
+          <section class="r-section">
+            <h3 class="r-title">References</h3>
+            <p class="r-text">Available upon request.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-bracket">&lt;</span>
+          <span class="logo-name">Aniket</span>
+          <span class="logo-accent">.dev</span>
+          <span class="logo-bracket">/&gt;</span>
+        </a>
+        <p class="footer-tagline">Crafting modern, responsive web experiences &amp; engineering robust software
+          solutions.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/aniketsharma85" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i
+            class="fa-brands fa-linkedin-in"></i></a>
+        <a href="mailto:csjmu24001390024@csjmu.ac.in" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        <a href="tel:6388587190" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p>&copy; 2024–2028 Aniket Sharma. All Rights Reserved.</p>
+        <p class="built-with">
+          Designed &amp; Engineered with <i class="fa-solid fa-heart heart-beat"></i> using HTML, CSS, JS &amp; Three.js
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- 3D Background Script -->
+  <script src="three-bg.js"></script>
+
+  <!-- Interactive Logic & Hover Micro-interactions -->
+  <script src="script.js"></script>
+</body>
+
+</html>
